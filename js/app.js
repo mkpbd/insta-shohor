@@ -16,7 +16,8 @@ const isLiked = (id) => {
 };
 
 const addToLiked = (id) => {
-    likedPostsId.plus(id); 
+    // likedPostsId.plus(id); 
+    likedPostsId.push(id); 
     showPosts(posts);
 };
 
@@ -124,7 +125,7 @@ const createPost = (post) => {
 
                   <div class="post__description">
                     <small>
-                      <a class="post__name--underline" href="#">
+                      <a class="post__name--underline" style="margin-right:10px;" href="#">
                           ${post?.comments[0]?.user}
                       </a>
                       ${post?.comments[0]?.text}
