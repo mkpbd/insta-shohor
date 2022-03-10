@@ -28,7 +28,7 @@ const reportPost = (id) => {
 };
 
 const displayContent = (text) => {
-    return text.length < 30 ? text.slice(0, 30) : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
+    return text.length < 30 ? text : text.slice(0, 30) + "<span class='fw-bold'>... read more</span>";
 };
 
 const switchTab = (id) => {
@@ -42,7 +42,7 @@ const switchTab = (id) => {
         document.getElementById( "reported" ).style.display = "none";
 
         displayLikedPosts();
-    } else {
+    } else  {
         document.getElementById( "reported" ).style.display = "block";
         document.getElementById( "posts" ).style.display = "none";
         document.getElementById( "liked" ).style.display = "none";
@@ -57,7 +57,7 @@ const createPost = (post) => {
     /*=========== Post user image show ==============*/
     const userImages = post.userImage;
 
-    console.log(post);
+    // console.log(post);
     const div = document.createElement( "article" );
     div.classList.add( "post" );
     div.innerHTML = `
@@ -159,7 +159,9 @@ const displayLikedPosts = () => {
 
 const displayReportedPosts = () => {
     const reportedPosts = getReportedPosts();
-    posts.forEach((post) => {
+    // Remove  previus post
+    document.getElementById( "reported" ).innerHTML = '';
+    reportedPosts.forEach((post) => {
         const div = createPost(post);
         document.getElementById( "reported" ).appendChild(div);
     });
