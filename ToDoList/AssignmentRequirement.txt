@@ -4,7 +4,7 @@
 
 3. text 30 character kom hole ta sompono dekahbe (done)
 
-4. comment show korbe  (done)
+4. comment show korbe and comment user name    (done)
 
 5. report korle ta sodo dekhate  hobe (done)
 
@@ -13,6 +13,6 @@
 
 7. github a minmum 6 ta comment korthe hobe  (done)
 
-8. how dose javascript 
+8. how dose javascript (done)
 9. javascript event loop work
-10. localstorge vs sessiongStorage 
+10. localstorge vs sessiongStorage  (done)
