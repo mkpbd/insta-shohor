@@ -89,79 +89,85 @@
       </div>
     </main>
 
-    <!--how dose javascript work-->
-    <section class="mt-5 container">
-      <h3>How does javascript work ?</h3>
-      <p>
-        javascript is primarily a client-site scripting language. A webpage can
-        contain embedded javascript which executes a user visits the page So
-        that they could make our web pages interactive or simple tasks. Today
-        browser scripting remains the main use case of javascript, But one
-        important thing to remember is that the client's web browser also needs
-        to support the javascript or it must have javascript enabled. nowadays
-        most web browsers support javascript and have their javascript engines,
-        for example, Google Chrome has its own JavaScript Engine called V8
-        <br>
-        This is the first stage of the engine every time we run a javascript programs our code is first receive by the parser inside the javascript Engine. The parser's job is to check the javascript code for syntactic error in line by line manner  
-becuase JavaScript is an interpretive scripting language so whenver an error is detected  the parser it throws a kind of error and stops execution of the code 
-      </p>
+    <section class="container my-3">
+      <!--how dose javascript work-->
+      <section class="mt-5 shadow-sm p-3 mb-3">
+        <h3>How does javascript work ?</h3>
+        <p>
+          javascript is primarily a client-site scripting language. A webpage
+          can contain embedded javascript which executes a user visits the page
+          So that they could make our web pages interactive or simple tasks.
+          Today browser scripting remains the main use case of javascript, But
+          one important thing to remember is that the client's web browser also
+          needs to support the javascript or it must have javascript enabled.
+          nowadays most web browsers support javascript and have their
+          javascript engines, for example, Google Chrome has its own JavaScript
+          Engine called V8
+          <br />
+          This is the first stage of the engine every time we run a javascript
+          programs our code is first receive by the parser inside the javascript
+          Engine. The parser's job is to check the javascript code for syntactic
+          error in line by line manner becuase JavaScript is an interpretive
+          scripting language so whenver an error is detected the parser it
+          throws a kind of error and stops execution of the code
+        </p>
+      </section>
+
+      <!--javascript event loops -->
+      <section class="mt-3 shadow-sm p-3 mb-3">
+        <h3>What is even loop ?</h3>
+        <p>
+          JavaScript has a runtime model base on even loop Which is responsible
+          for executing code collecting and processing events executing The
+          event loop is the secret behind javascript asynchronous programming.
+          <br />
+          JS executes all operations on a single thread but using a few smart
+          data structures it gives us the multi-threading
+          <br />
+          1. The call stack is responsible for keeping track of all the
+          operation in line to be executed whenever a function is finished, it
+          is popped from the stack <br />
+          2. The even queue is responsible for sending new functions to the
+          stack for processing. <br />
+          it follow the queue data structure to maintain the correct sequence
+          all operation should be sent for execution whenever an asynchronous
+          function is called it is sent to a browser API, These are APIs built
+          into the browser base on command receive from the stack the API starts
+          its own single-threaded operation example setTimeout() function ,
+          clearTimeout()
+          <br />
+          If a function Tasks a long time to execute we can not interact with
+          the web browser during the function's execution because the page
+          hangs. The event loop is a constantly runnig process that monition
+          both the callback queue and the call stack If the call stack is not
+          empty the event loop waits until it is empty and places the next
+          function from the callback queue to the call stack, if the callback
+          queue is empty nothing will happen
+        </p>
+      </section>
+
+      <!-- sessiongStorage and localStorage -->
+      <section class="shadow-sm p-3">
+        <h3>What is difference localstorage between sessionStorage ?</h3>
+        <p>
+          LocalStorage and SessionStorage are almost identical and have the same
+          API, The difference is that with sessionStorage, the data is persisted
+          only until the window or tab is closed. In the LocalStorage the data
+          is persisted until the user manually clears the browser cache or until
+          your web page clears the data. but the syntax for sessionStorage are
+          same we can create, read, and update key/value pairs in localStorage
+          we can create entries for the localStorage object by using the
+          setItem() method. The setItem() method takes two arguments the key and
+          corresponding value to read entries use the getItem() the getItem()
+          method take one arguments deleting and clearing Entries we can delete
+          an entry with the removeItem() the removeItem() method takes one
+          argument which will be a key of the localStorage object
+          <br />
+          localStorage use for long term use on the other hand SessionStorage
+          use when we need to store somthing that changes or somthing temporary
+        </p>
+      </section>
     </section>
-
-    <!--javascript event loops -->
-    <section class="mt-3 container">
-      <h3>What is even loop ?</h3>
-      <p>
-        JavaScript has a runtime model base on even loop Which is responsible
-        for executing code collecting and processing events executing The event
-        loop is the secret behind javascript asynchronous programming. <br>
-         JS
-        executes all operations on a single thread but using a few smart data
-        structures it gives us the multi-threading 
-        <br> 1. The call stack is responsible
-        for keeping track of all the operation in line to be executed whenever a
-        function is finished, it is popped from the stack <br>
-         2. The even queue is
-        responsible for sending new functions to the stack for processing. <br>
-         it
-        follow the queue data structure to maintain the correct sequence all
-        operation should be sent for execution whenever an asynchronous function
-        is called it is sent to a browser API, These are APIs built into the
-        browser base on command receive from the stack the API starts its own
-        single-threaded operation example setTimeout() function , clearTimeout()
-        <br>
-        If a function Tasks a long time to execute we can not interact with the web browser during the function's
-execution because the page hangs.
-
-
-The event loop is a constantly runnig process that monition both the callback queue and the call stack
-
-If the call stack is not empty the event loop waits until it is empty and places the next function from the callback queue to the call stack, if the callback queue is empty nothing will happen
-
-      </p>
-    </section>
-
-    <!-- sessiongStorage and localStorage -->
-    <section class="container">
-      <h3>What is difference localstorage between sessionStorage ?</h3>
-      <p>
-        LocalStorage and SessionStorage are almost identical and have the same
-        API, The difference is that with sessionStorage, the data is persisted
-        only until the window or tab is closed. In the LocalStorage the data is
-        persisted until the user manually clears the browser cache or until your
-        web page clears the data. but the syntax for sessionStorage are same we
-        can create, read, and update key/value pairs in localStorage we can
-        create entries for the localStorage object by using the setItem()
-        method. The setItem() method takes two arguments the key and
-        corresponding value to read entries use the getItem() the getItem()
-        method take one arguments deleting and clearing Entries we can delete an
-        entry with the removeItem() the removeItem() method takes one argument
-        which will be a key of the localStorage object
-        <br>
-        localStorage use for long term use on the other hand
-        SessionStorage use when we need to store somthing that changes or somthing temporary
-      </p>
-    </section>
-
     <footer></footer>
 
     <!-- add javascript  file  -->
