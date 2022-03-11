@@ -91,7 +91,7 @@
 
     <!--how dose javascript work-->
     <section class="mt-5 container">
-      <h3>How dose javascript work ?</h3>
+      <h3>How does javascript work ?</h3>
       <p>
         javascript is primarily a client-site scripting language. A webpage can
         contain embedded javascript which executes a user visits the page So
@@ -101,6 +101,9 @@
         to support the javascript or it must have javascript enabled. nowadays
         most web browsers support javascript and have their javascript engines,
         for example, Google Chrome has its own JavaScript Engine called V8
+        <br>
+        This is the first stage of the engine every time we run a javascript programs our code is first receive by the parser inside the javascript Engine. The parser's job is to check the javascript code for syntactic error in line by line manner  
+becuase JavaScript is an interpretive scripting language so whenver an error is detected  the parser it throws a kind of error and stops execution of the code 
       </p>
     </section>
 
@@ -125,12 +128,21 @@
         is called it is sent to a browser API, These are APIs built into the
         browser base on command receive from the stack the API starts its own
         single-threaded operation example setTimeout() function , clearTimeout()
+        <br>
+        If a function Tasks a long time to execute we can not interact with the web browser during the function's
+execution because the page hangs.
+
+
+The event loop is a constantly runnig process that monition both the callback queue and the call stack
+
+If the call stack is not empty the event loop waits until it is empty and places the next function from the callback queue to the call stack, if the callback queue is empty nothing will happen
+
       </p>
     </section>
 
     <!-- sessiongStorage and localStorage -->
     <section class="container">
-      <h3>What is difference localstorage between sessionStorage?</h3>
+      <h3>What is difference localstorage between sessionStorage ?</h3>
       <p>
         LocalStorage and SessionStorage are almost identical and have the same
         API, The difference is that with sessionStorage, the data is persisted
@@ -144,6 +156,9 @@
         method take one arguments deleting and clearing Entries we can delete an
         entry with the removeItem() the removeItem() method takes one argument
         which will be a key of the localStorage object
+        <br>
+        localStorage use for long term use on the other hand
+        SessionStorage use when we need to store somthing that changes or somthing temporary
       </p>
     </section>
 
